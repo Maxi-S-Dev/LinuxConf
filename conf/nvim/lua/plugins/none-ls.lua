@@ -7,9 +7,6 @@ return {
 				null_ls.builtins.formatting.stylua,
         --null_ls.builtins.formatting.<Formatter>,
         --null_ls.builtins.diagnostics.<Linter>,
-        
-        null_ls.builtins.formatting.clang_format,
-        null_ls.builtins.diagnostics.cpplint,
 			},
 		})
 
