@@ -38,6 +38,23 @@ return {
         },
       })
 
+      lspconfig.jdtls.setup({
+        capabilities = capabilities,
+        setup = {
+          java = {
+            configuration = {
+              runtimes = {
+                {
+                  name = "JavaSE-21",
+                  path = "/opt/jdk-21",
+                  default = true,
+                },
+              },
+            },
+          },
+        },
+      })
+
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
       vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
